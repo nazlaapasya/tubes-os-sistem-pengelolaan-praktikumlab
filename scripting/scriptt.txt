@@ -1,0 +1,7 @@
+scripting: ivan, joannes, nazla
+
+joann, tolong bagi lagi ya buat bertiga minggu ini, soalnya minggu ini lapor progress 
+
+nanti script nya dikumpulin di GitHub, kabarin di grup aja klo ada miss atau komen (kdg suka mls GitHub, hehe)
+
+ivan sm nazla buat scriptnya, nanti joan yg nyoba di Linux buat make sure scriptingnya 
