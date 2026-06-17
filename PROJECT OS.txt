@@ -1,0 +1,15 @@
+PROJECT OS
+
+output:scripting, ss, ilustrasi/demo program di dalam laporan
+laporan di kumpulin sama perwakilan aja
+
+bab 1 pendahuluan: penjelasan program yg dibuat(tujuan, fungsi, manfaat system, dan penerapannya di os gimana), dan peran dari amsing2 anggota nya
+
+bab 2 hasil implementasi : ss dr script, demo program(simpen di gdrive/yt, nanti link nya di input di laporan dan link nya dpt diakses) 
+
+kelompok 1: abi, anjaanie, nazla, ivan, benaya, tinna, joann
+
+tema kelompok 1 - sistem pengelolaan 
+-- membuat dir based on tahun kelas, cara memvalidasi, move folder pake script
+
+deadline 30 juni, hanya demo tanpa presentasi
