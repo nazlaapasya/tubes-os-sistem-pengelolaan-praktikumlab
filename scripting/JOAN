@@ -1,0 +1,31 @@
+# ==============================================================================
+# JOAN: INTEGRASI VALIDASI REGEX, PEMINDAHAN FILE, & HANDLING DUPLIKAT
+# ==============================================================================
+
+proses_file_tugas() {
+    TARGET_DIR="$BASE_DIR/$TAHUN_AJARAN/$KELAS/$PERTEMUAN"
+    
+    for file in "$INBOX_DIR"/*.pdf; do
+        [ -e "$file" ] || continue 
+        nama_file=$(basename "$file")
+
+        # Fitur 2: Validasi nama file format: NIM_Nama_Modul.pdf
+        if [[ $nama_file =~ ^([0-9]+)_([A-Za-z]+)_([A-Za-z0-9]+)\.pdf$ ]]; then
+            DEST_FILE="$TARGET_DIR/$nama_file"
+            
+            # Fitur 4: Mengidentifikasi file duplikat
+            if [ -f "$DEST_FILE" ]; then
+                echo "DUPLIKAT: $nama_file sudah ada."
+                catat_log "PROSES (Orang 2): $nama_file ditolak (Duplikat)."
+            else
+                # Fitur 3: Memindahkan file ke folder yang sesuai
+                mv "$file" "$DEST_FILE"
+                echo "SUKSES: $nama_file berhasil dipindahkan."
+                catat_log "PROSES (Orang 2): $nama_file berhasil divalidasi & dipindah."
+            fi
+        else
+            echo "FORMAT SALAH: $nama_file diabaikan."
+            catat_log "PROSES (Orang 2): Format $nama_file tidak valid."
+        fi
+    done
+}
